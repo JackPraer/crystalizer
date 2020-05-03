@@ -1,0 +1,64 @@
+.crystal-input__container {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.crystal-input {
+  cursor: pointer;
+  background: #ffffff;
+  border: 2px solid #d8dde7;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  font-size: 14px;
+  color: #9d9ea5;
+  padding: 9px 16px;
+  display: block;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(216, 221, 231, 0.5);
+  }
+}
+
+.crystal-input_icon {
+  padding-right: 45px;
+}
+
+.crystal-input-error__container {
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem;
+  font-size: 12px;
+  color: #eb5757;
+}
+
+.crystal-input_error {
+  color: #eb5757;
+  border-color: #eb5757;
+}
+
+.crystal-input-error__element {
+  margin: 0;
+}
+
+.crystal-input__label {
+  padding: 0 1rem;
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #26283b;
+  display: inline-flex;
+  align-items: center;
+  height: 1.8rem;
+  width: 100%;
+}
+
+.crystal-input__icon {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+}
