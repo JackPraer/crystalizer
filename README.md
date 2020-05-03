@@ -27,3 +27,21 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+### Components
+
+input
+calendar
+select + input
+select
+datepicker
+card
+modal
+tooltip
+table
+radio
+checkbox
+slider
+textarea
