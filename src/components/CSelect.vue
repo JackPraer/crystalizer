@@ -21,8 +21,8 @@
         <ul class="crystal-select__list">
           <li
             class="crystal-select__element"
-            v-for="(el, i) of list"
-            :key="i"
+            v-for="(el, index) of list"
+            :key="index"
             @click="select(el)"
           >
             <slot :el="el"> {{ el }} </slot>
@@ -34,9 +34,11 @@
 </template>
 
 <script>
+import { selectProps } from "@/props";
+
 import CInput from "./CInput";
 
-function outside(fn) {
+function outsideSub(fn) {
   global.addEventListener("focusin", fn);
   global.addEventListener("click", fn);
 }
@@ -49,23 +51,15 @@ function outsideUnsub(fn) {
 export default {
   model: {
     prop: "value",
-    event: "selected"
+    event: "selected",
   },
-  props: {
-    value: [String, Number],
-    list: Array,
-    placeholder: String,
-    mask: Object,
-    disabled: Boolean,
-    error: String,
-    id: String
-  },
+  props: selectProps,
   components: {
-    CInput
+    CInput,
   },
   data: () => ({
     isFocus: false,
-    privateValue: null
+    privateValue: null,
   }),
   methods: {
     select(el) {
@@ -79,10 +73,10 @@ export default {
       if (!this.$el.contains(event.target)) {
         this.isFocus = false;
       }
-    }
+    },
   },
   mounted() {
-    outside(this.hide);
+    outsideSub(this.hide);
   },
   beforeDestroy() {
     outsideUnsub(this.hide);
@@ -90,7 +84,7 @@ export default {
   watch: {
     value(val) {
       this.privateValue = val;
-    }
-  }
+    },
+  },
 };
 </script>

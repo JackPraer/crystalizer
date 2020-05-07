@@ -18,21 +18,21 @@
 export default {
   model: {
     prop: "checked",
-    event: "change"
+    event: "change",
   },
   props: {
     checked: Boolean,
-    disabled: Boolean
+    disabled: Boolean,
   },
   computed: {
     anchor() {
-      return this.id || this._uid + "-crystal-checkbox";
-    }
+      return this.id || `${this._uid}-crystal-checkbox`;
+    },
   },
   methods: {
     setValue() {
       this.$emit("change", !this.checked);
-    }
-  }
+    },
+  },
 };
 </script>

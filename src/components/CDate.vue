@@ -23,20 +23,25 @@ import VInput from "./VInput";
 export default {
   model: {
     prop: "value",
-    event: "change"
+    event: "change",
   },
   components: {
-    VInput
+    VInput,
   },
   props: {
     error: String,
     value: String,
-    disabled: Boolean
+    disabled: Boolean,
   },
   methods: {
     setDate(e) {
       this.$emit("change", e.target.value);
-    }
-  }
+    },
+  },
+  computed: {
+    anchor() {
+      return this.id || `${this._uid}-crystal-date`;
+    },
+  },
 };
 </script>

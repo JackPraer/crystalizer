@@ -18,7 +18,7 @@
 export default {
   model: {
     prop: "check",
-    event: "change"
+    event: "change",
   },
   props: {
     check: [String, Number],
@@ -26,7 +26,7 @@ export default {
     value: [String, Number],
     checked: Boolean,
     disabled: Boolean,
-    id: String
+    id: String,
   },
   created() {
     if (this.checked) {
@@ -34,12 +34,12 @@ export default {
     }
   },
   anchor() {
-    return this.id || this._uid + "-crystal-radio";
+    return this.id || `${this._uid}-crystal-radio`;
   },
   methods: {
     setValue() {
       this.$emit("change", this.value);
-    }
-  }
+    },
+  },
 };
 </script>

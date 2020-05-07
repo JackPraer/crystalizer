@@ -1,3 +1,26 @@
+:root {
+  --main: #1c1c1c;
+  --outline: rgba(216, 221, 231, 0.5);
+  --error: #eb5757;
+  --gray: #f4f4f4;
+  --border: #bfbfbf;
+
+  font-family: 
+    /* Safari for OS X and iOS (San Francisco) */ -apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+      BlinkMacSystemFont,
+    // Windows
+      "Segoe UI",
+    // Android
+      "Roboto",
+    // Basic web fallback
+      "Helvetica Neue",
+    Arial, sans-serif,
+    // Emoji fonts
+      "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 @import "./cinput.scss";
 @import "./cselect.scss";
 @import "./cradio.scss";
